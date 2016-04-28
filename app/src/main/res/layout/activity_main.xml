@@ -19,7 +19,8 @@
         android:textStyle="bold"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:textColor="@android:color/holo_red_dark" />
+        android:textColor="@color/colorPrimaryDark"
+        android:minWidth="200dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -31,17 +32,19 @@
         android:textStyle="bold"
         android:layout_below="@+id/b_newgame"
         android:layout_alignStart="@+id/b_newgame"
-        android:textColor="@android:color/holo_red_dark" />
+        android:textColor="@color/colorPrimaryDark"
+        android:minWidth="200dp" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView2"
-        android:src="#F4F1FE"
+        android:src="@drawable/logo"
         android:minHeight="50dp"
         android:minWidth="50dp"
         android:layout_above="@+id/b_newgame"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="67dp" />
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="70dp" />
 
 </RelativeLayout>

@@ -15,7 +15,7 @@ public class QuizActivity extends Activity implements View.OnClickListener{
     int qid=0;
     Question currentQ;
     TextView txtQuestion;
-    //TextView txtLevel;
+    TextView txtLevel;
     Button odpa, odpb, odpc;
 
     @Override
@@ -34,19 +34,6 @@ public class QuizActivity extends Activity implements View.OnClickListener{
         odpa.setOnClickListener(this);
         odpb.setOnClickListener(this);
         odpc.setOnClickListener(this);
-
-        /*switch(qid){
-            case 1: txtLevel.setText("1.000$"); break;
-            case 2: txtLevel.setText("5.000$"); break;
-            case 3: txtLevel.setText("10.000$"); break;
-            case 4: txtLevel.setText("15.000$"); break;
-            case 5: txtLevel.setText("20.000$"); break;
-            case 6: txtLevel.setText("50.000$"); break;
-            case 7: txtLevel.setText("100.000$"); break;
-            case 8: txtLevel.setText("250.000$"); break;
-            case 9: txtLevel.setText("500.000$"); break;
-            case 10: txtLevel.setText("1.000.000$"); break;
-        }*/
     }
 
     private void setQuestionView()
@@ -60,6 +47,7 @@ public class QuizActivity extends Activity implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
+
         Button answer = (Button) findViewById(v.getId());
         Log.d("yourans", currentQ.getANSWER() + " " + answer.getText());
         if (currentQ.getANSWER().equals(answer.getText())) {

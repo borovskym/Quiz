@@ -7,6 +7,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 public class Database extends SQLiteOpenHelper {
 	private static final int DATABASE_VERSION = 1;
@@ -44,18 +45,42 @@ public class Database extends SQLiteOpenHelper {
 		Question q1=new Question("Which company is the largest manufacturer" +
 				" of network equipment?","HP", "IBM", "CISCO", "CISCO");
 		this.addQuestion(q1);
+
 		Question q2=new Question("Which of the following is NOT " +
 				"an operating system?", "SuSe", "BIOS", "DOS", "BIOS");
 		this.addQuestion(q2);
+
 		Question q3=new Question("Which of the following is the fastest" +
 				" writable memory?","RAM", "FLASH","Register", "Register");
 		this.addQuestion(q3);
+
 		Question q4=new Question("Which of the following device" +
 				" regulates internet traffic?",	"Router", "Bridge", "Hub",  "Router");
 		this.addQuestion(q4);
+
 		Question q5=new Question("Which of the following is NOT an" +
 				" interpreted language?", "Ruby", "Python", "BASIC", "BASIC");
 		this.addQuestion(q5);
+
+		Question q6=new Question("Do you know what does mean" +
+				" pltka more?","NO", "YES", "IDI NAXUY", "YES");
+		this.addQuestion(q6);
+
+		Question q7=new Question("Which of the following is NOT " +
+				"an operating system?", "SuSe", "BIOS", "DOS", "BIOS");
+		this.addQuestion(q7);
+
+		Question q8=new Question("Which of the following is the fastest" +
+				" writable memory?","RAM", "FLASH","Register", "Register");
+		this.addQuestion(q8);
+
+		Question q9=new Question("Which of the following device" +
+				" regulates internet traffic?",	"Router", "Bridge", "Hub",  "Router");
+		this.addQuestion(q9);
+
+		Question q10=new Question("Which of the following is NOT an" +
+				" interpreted language?", "Ruby", "Python", "BASIC", "BASIC");
+		this.addQuestion(q10);
 	}
 
 	@Override

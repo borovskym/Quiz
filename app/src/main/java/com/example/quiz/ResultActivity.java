@@ -38,6 +38,8 @@ public class ResultActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				Intent i = new Intent(getApplicationContext(), MainActivity.class);
+				i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				i.putExtra("EXIT", true);
 				startActivity(i);
 			}
 		});

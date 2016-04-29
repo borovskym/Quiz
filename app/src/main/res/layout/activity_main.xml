@@ -47,4 +47,17 @@
         android:layout_marginTop="20dp"
         android:layout_marginBottom="70dp" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exit"
+        android:id="@+id/b_exit"
+        android:background="@color/b_bg"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:minWidth="200dp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/b_about"
+        android:layout_alignStart="@+id/b_about" />
+
 </RelativeLayout>

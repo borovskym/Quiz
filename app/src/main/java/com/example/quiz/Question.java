@@ -20,7 +20,7 @@ public class Question {
 
 	public Question(String question, String oPTA, String oPTB, String oPTC,
 			String answer) {
-		
+
 		QUESTION = question;
 		OPTA = oPTA;
 		OPTB = oPTB;

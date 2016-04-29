@@ -1,6 +1,8 @@
 package com.example.quiz;
 
 import java.util.List;
+import java.util.Random;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -15,7 +17,6 @@ public class QuizActivity extends Activity implements View.OnClickListener{
     int qid=0;
     Question currentQ;
     TextView txtQuestion;
-    TextView txtLevel;
     Button odpa, odpb, odpc;
 
     @Override
@@ -49,11 +50,12 @@ public class QuizActivity extends Activity implements View.OnClickListener{
     public void onClick(View v) {
 
         Button answer = (Button) findViewById(v.getId());
-        Log.d("yourans", currentQ.getANSWER() + " " + answer.getText());
+        //Log.d("yourans", currentQ.getANSWER() + " " + answer.getText());
         if (currentQ.getANSWER().equals(answer.getText())) {
             score++;
-            Log.d("score", "Your score" + score);
+            //Log.d("score", "Your score" + score);
         }
+
         if (qid < 10) {
             currentQ = quesList.get(qid);
             setQuestionView();

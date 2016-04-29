@@ -42,8 +42,8 @@ public class Database extends SQLiteOpenHelper {
 
 	private void addQuestions()
 	{
-		Question q1=new Question("Which company is the largest manufacturer" +
-				" of network equipment?","HP", "IBM", "CISCO", "CISCO");
+		Question q1=new Question("Which of the following device" +
+				" is using for typing?", "Keyboard", "Monitor", "Mouse",  "Keyboard");
 		this.addQuestion(q1);
 
 		Question q2=new Question("Which of the following is NOT " +
@@ -62,24 +62,24 @@ public class Database extends SQLiteOpenHelper {
 				" interpreted language?", "Ruby", "Python", "BASIC", "BASIC");
 		this.addQuestion(q5);
 
-		Question q6=new Question("Do you know what does mean" +
-				" pltka more?","NO", "YES", "IDI NAXUY", "YES");
+		Question q6=new Question("Which of the following is NOT an" +
+				" object-oriented language?","HTML", "Java", "C#", "HTML");
 		this.addQuestion(q6);
 
 		Question q7=new Question("Which of the following is NOT " +
-				"an operating system?", "SuSe", "BIOS", "DOS", "BIOS");
+				"loop?", "FOR", "WHILE", "IF", "IF");
 		this.addQuestion(q7);
 
-		Question q8=new Question("Which of the following is the fastest" +
-				" writable memory?","RAM", "FLASH","Register", "Register");
+		Question q8=new Question("Which of the following is mobile" +
+				"devices operating system ?","LINUX", "DOS", "Android", "Android");
 		this.addQuestion(q8);
 
-		Question q9=new Question("Which of the following device" +
-				" regulates internet traffic?",	"Router", "Bridge", "Hub",  "Router");
+		Question q9=new Question("Which company is the largest manufacturer" +
+				" of network equipment?","HP", "IBM", "CISCO", "CISCO");
 		this.addQuestion(q9);
 
-		Question q10=new Question("Which of the following is NOT an" +
-				" interpreted language?", "Ruby", "Python", "BASIC", "BASIC");
+		Question q10=new Question("When was internet invented" +
+				"?", "1948", "2000", "1960", "1960");
 		this.addQuestion(q10);
 	}
 

@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.quiz.QuizActivity"
-    android:background="@color/bg">
+    android:background="@color/colorPrimary">
 
     <TextView
         android:layout_width="wrap_content"
@@ -27,7 +27,7 @@
         android:text="New Button"
         android:id="@+id/button"
         android:layout_marginBottom="56dp"
-        android:background="@color/b_bg"
+        android:background="@color/bg"
         android:textColor="@color/colorPrimaryDark"
         android:textStyle="bold"
         android:layout_alignParentBottom="true"
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:text="New Button"
         android:id="@+id/button2"
-        android:background="@color/b_bg"
+        android:background="@color/bg"
         android:textColor="@color/colorPrimaryDark"
         android:textStyle="bold"
         android:layout_alignWithParentIfMissing="false"
@@ -62,7 +62,7 @@
         android:layout_height="wrap_content"
         android:text="New Button"
         android:id="@+id/button3"
-        android:background="@color/b_bg"
+        android:background="@color/bg"
         android:textColor="@color/colorPrimaryDark"
         android:textStyle="bold"
         android:layout_alignWithParentIfMissing="false"

@@ -8,14 +8,14 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.quiz.MainActivity"
-    android:background="@color/bg">
+    android:background="@color/colorPrimary">
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="New Game"
         android:id="@+id/b_newgame"
-        android:background="@color/b_bg"
+        android:background="@color/bg"
         android:textStyle="bold"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
@@ -28,7 +28,7 @@
         android:text="About"
         android:id="@+id/b_about"
         android:layout_marginTop="42dp"
-        android:background="@color/b_bg"
+        android:background="@color/bg"
         android:textStyle="bold"
         android:layout_below="@+id/b_newgame"
         android:layout_alignStart="@+id/b_newgame"
@@ -39,20 +39,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView2"
-        android:src="@drawable/logo"
         android:minHeight="50dp"
         android:minWidth="50dp"
         android:layout_above="@+id/b_newgame"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="70dp" />
+        android:layout_marginBottom="70dp"
+        android:src="@drawable/logo" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Exit"
         android:id="@+id/b_exit"
-        android:background="@color/b_bg"
+        android:background="@color/bg"
         android:textStyle="bold"
         android:textColor="@color/colorPrimaryDark"
         android:minWidth="200dp"

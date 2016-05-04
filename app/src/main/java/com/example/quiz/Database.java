@@ -17,6 +17,7 @@ public class Database extends SQLiteOpenHelper {
 	private static final String TABLE_QUEST = "quest";
 	// tasks Table Columns names
 	private static final String KEY_ID = "id";
+	private static final String KEY_LVL = "lvl";
 	private static final String KEY_QUES = "question";
 	private static final String KEY_ANSWER = "answer"; //correct option
 	private static final String KEY_OPTA= "opta"; //option a
@@ -33,7 +34,7 @@ public class Database extends SQLiteOpenHelper {
 	public void onCreate(SQLiteDatabase db) {
 		dbase=db;
 		String sql = "CREATE TABLE IF NOT EXISTS " + TABLE_QUEST + " ( "
-				+ KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + KEY_QUES
+				+ KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "+KEY_LVL+" INTEGER, "+ KEY_QUES
 				+ " TEXT, " + KEY_ANSWER+ " TEXT, "+KEY_OPTA +" TEXT, "
 				+KEY_OPTB +" TEXT, "+KEY_OPTC+" TEXT)";
 		db.execSQL(sql);		
@@ -42,43 +43,43 @@ public class Database extends SQLiteOpenHelper {
 
 	private void addQuestions()
 	{
-		Question q1=new Question("Which of the following device" +
+		Question q1=new Question(1,"Which of the following device" +
 				" is using for typing?", "Keyboard", "Monitor", "Mouse",  "Keyboard");
 		this.addQuestion(q1);
 
-		Question q2=new Question("Which of the following is NOT " +
+		Question q2=new Question(1,"Which of the following is NOT " +
 				"an operating system?", "SuSe", "BIOS", "DOS", "BIOS");
 		this.addQuestion(q2);
 
-		Question q3=new Question("Which of the following is the fastest" +
+		Question q3=new Question(2,"Which of the following is the fastest" +
 				" writable memory?","RAM", "FLASH","Register", "Register");
 		this.addQuestion(q3);
 
-		Question q4=new Question("Which of the following device" +
+		Question q4=new Question(2,"Which of the following device" +
 				" regulates internet traffic?",	"Router", "Bridge", "Hub",  "Router");
 		this.addQuestion(q4);
 
-		Question q5=new Question("Which of the following is NOT an" +
+		Question q5=new Question(3,"Which of the following is NOT an" +
 				" interpreted language?", "Ruby", "Python", "BASIC", "BASIC");
 		this.addQuestion(q5);
 
-		Question q6=new Question("Which of the following is NOT an" +
+		Question q6=new Question(3,"Which of the following is NOT an" +
 				" object-oriented language?","HTML", "Java", "C#", "HTML");
 		this.addQuestion(q6);
 
-		Question q7=new Question("Which of the following is NOT " +
+		Question q7=new Question(4,"Which of the following is NOT " +
 				"loop?", "FOR", "WHILE", "IF", "IF");
 		this.addQuestion(q7);
 
-		Question q8=new Question("Which of the following is mobile" +
+		Question q8=new Question(4,"Which of the following is mobile" +
 				"devices operating system ?","LINUX", "DOS", "Android", "Android");
 		this.addQuestion(q8);
 
-		Question q9=new Question("Which company is the largest manufacturer" +
+		Question q9=new Question(5,"Which company is the largest manufacturer" +
 				" of network equipment?","HP", "IBM", "CISCO", "CISCO");
 		this.addQuestion(q9);
 
-		Question q10=new Question("When was internet invented" +
+		Question q10=new Question(5,"When was internet invented" +
 				"?", "1948", "2000", "1960", "1960");
 		this.addQuestion(q10);
 	}
@@ -95,6 +96,7 @@ public class Database extends SQLiteOpenHelper {
 	public void addQuestion(Question quest) {
 		//SQLiteDatabase db = this.getWritableDatabase();
 		ContentValues values = new ContentValues();
+		values.put(KEY_LVL, quest.getLVL());
 		values.put(KEY_QUES, quest.getQUESTION()); 
 		values.put(KEY_ANSWER, quest.getANSWER());
 		values.put(KEY_OPTA, quest.getOPTA());
@@ -115,11 +117,12 @@ public class Database extends SQLiteOpenHelper {
 			do {
 				Question quest = new Question();
 				quest.setID(cursor.getInt(0));
-				quest.setQUESTION(cursor.getString(1));
-				quest.setANSWER(cursor.getString(2));
-				quest.setOPTA(cursor.getString(3));
-				quest.setOPTB(cursor.getString(4));
-				quest.setOPTC(cursor.getString(5));
+				quest.setLVL(cursor.getInt(1));
+				quest.setQUESTION(cursor.getString(2));
+				quest.setANSWER(cursor.getString(3));
+				quest.setOPTA(cursor.getString(4));
+				quest.setOPTB(cursor.getString(5));
+				quest.setOPTC(cursor.getString(6));
 				quesList.add(quest);
 			} while (cursor.moveToNext());
 		}

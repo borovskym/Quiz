@@ -2,6 +2,7 @@ package com.example.quiz;
 
 public class Question {
 	private int ID;
+	private int LVL;
 	private String QUESTION;
 	private String OPTA;
 	private String OPTB;
@@ -11,6 +12,7 @@ public class Question {
 	public Question()
 	{
 		ID=0;
+		LVL=0;
 		QUESTION="";
 		OPTA="";
 		OPTB="";
@@ -18,9 +20,9 @@ public class Question {
 		ANSWER="";
 	}
 
-	public Question(String question, String oPTA, String oPTB, String oPTC,
+	public Question(int lvl, String question, String oPTA, String oPTB, String oPTC,
 			String answer) {
-
+		LVL = lvl;
 		QUESTION = question;
 		OPTA = oPTA;
 		OPTB = oPTB;
@@ -28,10 +30,8 @@ public class Question {
 		ANSWER = answer;
 	}
 
-	public int getID()
-	{
-		return ID;
-	}
+	public int getID() { return ID; }
+	public int getLVL() { return LVL; }
 	public String getQUESTION() {
 		return QUESTION;
 	}
@@ -52,6 +52,7 @@ public class Question {
 	{
 		ID=id;
 	}
+	public void setLVL(int lvl) { LVL=lvl; }
 	public void setQUESTION(String question) {
 		QUESTION = question;
 	}

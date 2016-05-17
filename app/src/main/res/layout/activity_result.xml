@@ -16,10 +16,10 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
         android:id="@+id/textResult"
+        android:layout_marginTop="55dp"
+        android:textColor="@color/q_txt"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="129dp"
-        android:textColor="@color/q_txt" />
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -33,4 +33,18 @@
         android:textColor="@color/colorPrimaryDark"
         android:textStyle="bold"
         android:minHeight="50dp" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:contextClickable="false"
+        android:divider="@color/colorAccent"
+        android:dividerHeight="1dp"
+        android:headerDividersEnabled="false"
+        android:footerDividersEnabled="false"
+        android:layout_below="@+id/textResult"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="53dp"
+        android:layout_above="@+id/b_back" />
 </RelativeLayout>

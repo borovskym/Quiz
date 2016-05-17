@@ -33,6 +33,7 @@ public class Database extends SQLiteOpenHelper {
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		dbase=db;
+
 		String sql = "CREATE TABLE IF NOT EXISTS " + TABLE_QUEST + " ( "
 				+ KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "+KEY_LVL+" INTEGER, "+ KEY_QUES
 				+ " TEXT, " + KEY_ANSWER+ " TEXT, "+KEY_OPTA +" TEXT, "
@@ -48,7 +49,7 @@ public class Database extends SQLiteOpenHelper {
 		this.addQuestion(q1);
 
 		Question q2=new Question(1,"Which of the following is NOT " +
-				"an operating system?", "SuSe", "BIOS", "DOS", "BIOS");
+				" an operating system?", "SuSe", "BIOS", "DOS", "BIOS");
 		this.addQuestion(q2);
 
 		Question q3=new Question(1,"Which of the following is the fastest" +
@@ -68,11 +69,11 @@ public class Database extends SQLiteOpenHelper {
 		this.addQuestion(q6);
 
 		Question q7=new Question(1,"Which of the following is NOT " +
-				"loop?", "FOR", "WHILE", "IF", "IF");
+				" loop?", "FOR", "WHILE", "IF", "IF");
 		this.addQuestion(q7);
 
 		Question q8=new Question(1,"Which of the following is mobile" +
-				"devices operating system ?","LINUX", "DOS", "Android", "Android");
+				" devices operating system ?","LINUX", "DOS", "Android", "Android");
 		this.addQuestion(q8);
 
 		Question q9=new Question(1,"Which company is the largest manufacturer" +
@@ -104,7 +105,7 @@ public class Database extends SQLiteOpenHelper {
 		this.addQuestion(q15);
 
 		Question q16=new Question(2,"Where is the headquter of Microsoft" +
-				"office located ?", "New York", "Washington", "California", "Washington");
+				" office located ?", "New York", "Washington", "California", "Washington");
 		this.addQuestion(q16);
 
 		Question q17=new Question(2,"GIF is an extension of" +
@@ -112,15 +113,15 @@ public class Database extends SQLiteOpenHelper {
 		this.addQuestion(q17);
 
 		Question q18=new Question(2,"Mac operating system is developed by" +
-				"which company?", "IBM", "Microsoft", "Apple", "Apple");
+				" which company?", "IBM", "Microsoft", "Apple", "Apple");
 		this.addQuestion(q18);
 
 		Question q19=new Question(2,"Which of the following is NOT" +
-				"a database software?", "COBOL", "Oracle", "Sybase", "COBOL");
+				" a database software?", "COBOL", "Oracle", "Sybase", "COBOL");
 		this.addQuestion(q19);
 
 		Question q20=new Question(2,"Which of the following is NOT" +
-				"an operating system?", "DOS", "Mac", "C", "C");
+				" an operating system?", "DOS", "Mac", "C", "C");
 		this.addQuestion(q20);
 
 		Question q21=new Question(3,"In computer world, Trojan refer to" +
@@ -132,19 +133,19 @@ public class Database extends SQLiteOpenHelper {
 		this.addQuestion(q22);
 
 		Question q23=new Question(3,"Which of the following is NOT" +
-				"web browser?", "Facebook", "WWW", "MOSAIC", "Facebook");
+				" web browser?", "Facebook", "WWW", "MOSAIC", "Facebook");
 		this.addQuestion(q23);
 
 		Question q24=new Question(3,"What is the extension type of the" +
-				"excel 2007 files?", ".xls", ".xsl", ".xlsx", ".xlsx");
+				" excel 2007 files?", ".xls", ".xsl", ".xlsx", ".xlsx");
 		this.addQuestion(q24);
 
 		Question q25=new Question(3,"A folder in windows computer cant be made" +
-				"with the name?", "con", "make", "can", "con");
+				" with the name?", "con", "make", "can", "con");
 		this.addQuestion(q25);
 
 		Question q26=new Question(3,"Total number of function keys in a" +
-				"computer keyboard?", "10", "12", "14", "12");
+				" computer keyboard?", "10", "12", "14", "12");
 		this.addQuestion(q26);
 
 		Question q27=new Question(3,"Which one is text editor for MS Windows" +
@@ -152,7 +153,7 @@ public class Database extends SQLiteOpenHelper {
 		this.addQuestion(q27);
 
 		Question q28=new Question(3,"The basic units of a excel spreedsheet where we" +
-				"enter data is called?", "Box", "Cell", "Tab", "Cell");
+				" enter data is called?", "Box", "Cell", "Tab", "Cell");
 		this.addQuestion(q28);
 
 		Question q29=new Question(3,"Linux is an example of" +
@@ -160,17 +161,17 @@ public class Database extends SQLiteOpenHelper {
 		this.addQuestion(q29);
 
 		Question q30=new Question(3,"A common boundary between two computers is" +
-				"known as?", "Interface", "Surface", "Intradiction", "Interface");
+				" known as?", "Interface", "Surface", "Intradiction", "Interface");
 		this.addQuestion(q30);
 
-		//Hardcore level
+		//Final level
 
 		Question q31=new Question(4,"Who created the C programming language" +
 				"?", "Robin Milner", "Ken Thompson", "Dennis Ritchie", "Dennis Ritchie");
 		this.addQuestion(q31);
 
 		Question q32=new Question(4,"India first super computer PARAM 8000 was" +
-				"installed in?", "1991", "1995", "1988", "1991");
+				" installed in?", "1991", "1995", "1988", "1991");
 		this.addQuestion(q32);
 
 		Question q33=new Question(4,"Who developed Java programming language" +

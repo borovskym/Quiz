@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Sovy Quiz</string>
-    <string name="results">Results</string>
     <string name="author">Author:</string>
     <string name="name">Michal Borovsky</string>
     <string name="name2">Marek Sibal</string>

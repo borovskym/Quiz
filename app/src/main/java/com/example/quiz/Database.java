@@ -44,8 +44,8 @@ public class Database extends SQLiteOpenHelper {
 
 	private void addQuestions()
 	{
-		Question q1=new Question(1,"Which of the following device" +
-				" is using for typing?", "Keyboard", "Monitor", "Mouse",  "Keyboard");
+		Question q1=new Question(1,"Which of the following devices" +
+				" is used for typing?", "Keyboard", "Monitor", "Mouse",  "Keyboard");
 		this.addQuestion(q1);
 
 		Question q2=new Question(1,"Which of the following is NOT " +

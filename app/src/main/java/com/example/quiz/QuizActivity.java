@@ -13,6 +13,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -121,6 +122,7 @@ public class QuizActivity extends Activity implements View.OnClickListener{
     }
 
     private void startWrongAnswerAnimation(final View v) {
+
         int colorStart = v.getSolidColor();
         int colorEnd = 0xFFFF0000;
         anim = ObjectAnimator.ofInt(v,"backgroundColor",colorStart,colorEnd);
@@ -136,6 +138,7 @@ public class QuizActivity extends Activity implements View.OnClickListener{
             @Override
             public void onAnimationEnd(Animator animation) {
                 v.setBackgroundColor(Color.WHITE);
+
             }
         });
         anim.start();
@@ -157,6 +160,7 @@ public class QuizActivity extends Activity implements View.OnClickListener{
             @Override
             public void onAnimationEnd(Animator animation) {
                 v.setBackgroundColor(Color.WHITE);
+
             }
         });
         anim.start();
